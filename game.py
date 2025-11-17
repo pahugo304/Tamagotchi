@@ -17,7 +17,7 @@ def print_stats(pet: Tamagotchi) -> None:
     ))
     print("=" * 40)
 
-
+    
 def ask_action() -> str:
     print("Que voulez-vous faire ?")
     print("1. Nourrir")
@@ -26,6 +26,7 @@ def ask_action() -> str:
     print("4. Laver")
     print("5. Sauvegarder la partie")
     print("6. Quitter")
+    print("\n")
     choice = input("> ").strip()
     return choice
 
@@ -61,9 +62,11 @@ def game_loop(pet: Tamagotchi) -> None:
                 save_game(pet)
                 print("Partie sauvegardée !")
             print("À bientôt !")
+            print("\n")
             break
         else:
             print("Choix invalide, réessayez.")
+            print("\n")
             continue
 
         pet.apply_turn_effects()
