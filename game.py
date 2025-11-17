@@ -6,10 +6,10 @@ from save_system import save_game, load_game
 def print_stats(pet: Tamagotchi) -> None:
     print("=" * 40)
     print(f"Nom : {pet.name} | Âge : {pet.age} tour(s)")
-    print(f"Faim       : {pet.hunger}/100 (0 = rassasié, 100 = affamé -> GAME OVER)")
-    print(f"Énergie    : {pet.energy}/100 (0 = épuisé -> GAME OVER)")
-    print(f"Humeur     : {pet.mood}/100 (0 = dépression -> GAME OVER)")
-    print(f"Propreté   : {pet.cleanliness}/100 (0 = trop sale -> GAME OVER)")
+    print(f"Faim       : {pet.hunger}/100")
+    print(f"Énergie    : {pet.energy}/100")
+    print(f"Humeur     : {pet.mood}/100")
+    print(f"Propreté   : {pet.cleanliness}/100")
     print("=" * 40)
     print(pet.status_message())
     print(get_tamagotchi_art(
@@ -20,14 +20,14 @@ def print_stats(pet: Tamagotchi) -> None:
     
 def ask_action() -> str:
     print("Que voulez-vous faire ?")
-    print("1. Nourrir")
-    print("2. Dormir")
-    print("3. Jouer")
-    print("4. Laver")
-    print("5. Sauvegarder la partie")
-    print("6. Quitter")
+    print("1/   Nourrir")
+    print("2/  Dormir")
+    print("3/   Jouer")
+    print("4/  Laver")
+    print("5/   Sauvegarder la partie")
+    print("6/  Quitter")
     print("\n")
-    choice = input("> ").strip()
+    choice = input("Votre choix :").strip()
     return choice
 
 
@@ -74,10 +74,10 @@ def game_loop(pet: Tamagotchi) -> None:
 
 def main():
     print("=== TAMAGOTCHI VIRTUEL ===")
-    print("1. Nouvelle partie")
-    print("2. Charger la partie")
-    print("3. Quitter")
-    choice = input("> ").strip()
+    print("1/ Nouvelle partie")
+    print("2/  Charger la partie")
+    print("3/   Quitter")
+    choice = input("Votre choix : ").strip()
 
     if choice == "1":
         name = input("Donnez un nom à votre Tamagotchi : ").strip()
