@@ -32,16 +32,16 @@ class Tamagotchi:
 
     def status_message(self) -> str:
         if not self.is_alive():
-            return f"{self.name} ne va pas bien..."
+            return f"{self.name} ne va pas bien... </3"
         if self.hunger > 70:
-            return f"{self.name} a très faim !"
+            return f"{self.name} a très faim </3!"
         if self.energy < 30:
-            return f"{self.name} est très fatigué."
+            return f"{self.name} est très fatigué </3"
         if self.mood < 30:
-            return f"{self.name} est déprimé..."
+            return f"{self.name} est déprimé... </3"
         if self.cleanliness < 30:
-            return f"{self.name} est très sale."
-        return f"{self.name} est content :)"
+            return f"{self.name} est très sale </3"
+        return f"{self.name} est content :D"
 
     def apply_turn_effects(self):
         self.age += 1
